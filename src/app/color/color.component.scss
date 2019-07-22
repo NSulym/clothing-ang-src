@@ -1,0 +1,13 @@
+.wrap{
+  .color{
+    width: 63px;
+    height: 40px;
+    text-align: center;
+    line-height: 38px;
+    border: 5px solid #47a3da;
+    border-bottom: none;
+    &:last-child{
+      margin-bottom: 5px;
+    }
+  }
+}

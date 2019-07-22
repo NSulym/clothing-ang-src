@@ -1,0 +1,83 @@
+.wrap{
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  @media only screen and (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+  }
+  .body{
+    width: 330px;
+    height: 380px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 10px;
+    position: relative;
+    border: 5px solid #47a3da;
+    @media only screen and (max-width: 768px) {
+      margin-bottom: 10px;
+    }
+    svg{
+      height: 360px;
+    }
+    .number{
+      position: absolute;
+      top: 28%;
+      color: #fff;
+      font-size: 85px;
+    }
+    .number__jeans{
+      position: absolute;
+      top: 11%;
+      right: 32%;
+      color: #fff;
+      font-size: 40px;
+    }
+    ul {
+      display: flex;
+      justify-content: space-between;
+      margin: -1px 0;
+      padding: 0;
+      list-style-type: none;
+      li {
+        width: 63px;
+        height: 40px;
+        text-align: center;
+        line-height: 38px;
+        border-top: 5px solid #47a3da;
+        border-right: 5px solid #47a3da;
+        &:last-child{
+          border-right: none;
+        }
+        input{
+          width: 40px;
+          height: 34px;
+          padding-left: 20px;
+          &:focus{
+            outline: none;
+          }
+        }
+      }
+      .size{
+        position: relative;
+        app-size{
+          display: block;
+          position: absolute;
+          left: -5px;
+          bottom: 100%;
+        }
+      }
+      .color{
+        position: relative;
+        app-color{
+          display: block;
+          position: absolute;
+          left: -5px;
+          bottom: 100%;
+        }
+      }
+    }
+  }
+}

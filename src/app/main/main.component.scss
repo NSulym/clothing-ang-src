@@ -1,0 +1,16 @@
+div{
+  display: flex;
+  justify-content: center;
+  margin: 40px 0;
+  button{
+    padding: 10px 40px;
+    background: #008000;
+    border: none;
+    color: #fff;
+    letter-spacing: .5px;
+    text-transform: capitalize;
+    &:focus{
+      outline: none;
+    }
+  }
+}

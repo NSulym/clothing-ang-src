@@ -1,0 +1,22 @@
+<div class="wrap">
+  <div class="body">
+    <span class="delete" (click)="deleteOrder(index)">x</span>
+
+    <svg [ngStyle]="{color: order.color}"><use [attr.xlink:href]="'#'+order.type"></use></svg>
+    <span class="number" [ngClass]="order.type === 'jeans' ? 'number__jeans' : 'number'">{{order.text}}</span>
+    <div>
+      <p>Name: {{order.type}}</p>
+      <p>Size: {{order.size}}</p>
+      <p>
+        <button (click)="changeCount(-1)" [disabled]="count === 1">-</button> {{count}}
+        <button (click)="changeCount(+1)">+</button>
+      </p>
+      <p>{{order.price*count}}$</p>
+      <button class="confirm" (click)="onConfirm(order.price, order.type)">confirm</button>
+    </div>
+  </div>
+</div>
+
+<div class="wrap-btn">
+  <button routerLink="/">go to shop</button>
+</div>

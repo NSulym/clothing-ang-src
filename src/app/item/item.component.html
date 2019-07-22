@@ -1,0 +1,35 @@
+<div class="wrap">
+  <div class="body">
+    <svg [ngStyle]="{color: selectColor}"><use [attr.xlink:href]="'#'+option.type"></use></svg>
+    <span [ngClass]="option.type === 'jeans' ? 'number__jeans' : 'number'">{{number}}</span>
+    <ul>
+      <li>{{option.price}}$</li>
+      <li><input type="text" #text [(ngModel)]="number"></li>
+      <li class="size" (mouseenter)="onEnter()" (mouseleave)="onLeave()">
+        {{selectSize}}
+        <app-size
+          *ngIf="showSize"
+          (selectSize)="onSelectSize($event)"
+        >
+        </app-size>
+      </li>
+      <li
+        class="color"
+        [ngStyle]="{backgroundColor: selectColor}"
+        (mouseenter)="onEnterColor()"
+        (mouseleave)="onLeaveColor()"
+      >
+        <app-color
+          *ngIf="showColor"
+          (selectColor)="onSelectColor($event)"
+        >
+        </app-color>
+      </li>
+      <li (click)="save(text)">save</li>
+    </ul>
+  </div>
+</div>
+
+
+
+

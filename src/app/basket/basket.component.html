@@ -1,0 +1,1 @@
+<app-basket-item *ngFor="let order of orders, let i = index" [order]="order" [index]="i" (deleteIndex)="onDeleteIndex($event)"></app-basket-item>
